@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Israel Flores Reza | Desarrollador Jr. UTEZ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #00c6ff;
+      --secondary-color: #0072ff;
+      --dark-color: #1a1a2e;
+      --light-color: #f8f9fa;
+      --utez-color: #e63946;
+    }
+    
+    body {
+      background: linear-gradient(135deg, var(--dark-color), #0f3460);
+      color: var(--light-color);
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .hero-section {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+      background: url('https://www.utez.edu.mx/wp-content/uploads/2021/01/edificio.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 114, 255, 0.6));
+      z-index: -1;
+    }
+    
+    .profile-title {
+      font-size: 3.5rem;
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    
+    .profile-subtitle {
+      font-size: 1.5rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+    
+    .profile-img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border: 5px solid var(--utez-color);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .profile-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+      border-color: white;
+    }
+    
+    .info-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-left: 5px solid var(--utez-color);
+      transition: all 0.3s ease;
+    }
+    
+    .info-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    
+    .section-title {
+      color: var(--primary-color);
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    }
+    
+    .skill-badge {
+      background: rgba(0, 198, 255, 0.2);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 50px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      display: inline-block;
+      border: 1px solid rgba(0, 198, 255, 0.5);
+    }
+    
+    .utez-badge {
+      background: rgba(230, 57, 70, 0.2);
+      border: 1px solid rgba(230, 57, 70, 0.5);
+    }
+    
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      margin-right: 15px;
+      color: white;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      background: var(--utez-color);
+      transform: translateY(-5px);
+      color: white;
+    }
+    
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .back-btn {
+      background: rgba(255,255,255,0.1);
+      border: none;
+      border-radius: 50px;
+      padding: 10px 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: 30px;
+    }
+    
+    .back-btn:hover {
+      background: var(--utez-color);
+      transform: translateY(-3px);
+    }
+    
+    .project-card {
+      border-left: 4px solid var(--utez-color);
+      transition: all 0.3s ease;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    
+    .certification-badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: var(--utez-color);
+      color: white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+    
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--utez-color);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -30px;
+      top: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      border: 3px solid var(--utez-color);
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-1 order-2">
+          <h1 class="profile-title animate__animated animate__fadeInDown">Israel Flores Reza</h1>
+          <h2 class="profile-subtitle animate__animated animate__fadeInDown animate__delay-1s">
+            <span class="badge bg-danger">Desarrollador Jr.</span> en CDS UTEZ
+          </h2>
+          <p class="lead animate__animated animate__fadeIn animate__delay-2s">
+            Desarrollador de software en el Centro de Desarrollo de Software (CDS) de la UTEZ, 
+            con experiencia en proyectos institucionales bajo estándares CMMI nivel 3 y MOPROSOFT nivel 5.
+          </p>
+          
+          <div class="mt-4 animate__animated animate__fadeIn animate__delay-3s">
+            <a href="https://github.com/RobertoIsraelFloresReza" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.utez.edu.mx" class="social-link" target="_blank"><i class="fas fa-university"></i></a>
+            <a href="" class="social-link"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-2 order-1 text-center mb-4 mb-lg-0">
+          <img src="https://ca.slack-edge.com/T05K3N6824R-U07KJA6TVJS-1e8341c9ef65-512" 
+               class="profile-img rounded-circle floating animate__animated animate__fadeIn" alt="Israel Flores Reza">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="info-card animate__animated animate__fadeInLeft">
+            <h3 class="section-title">Experiencia en CDS UTEZ</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h5><strong>SGCITAS (Actual)</strong></h5>
+                <p class="text-muted">Sistema Gestor de Citas para Servicios Escolares</p>
+                <ul>
+                  <li>Desarrollo de sistema de citas en línea para la comunidad UTEZ</li>
+                  <li>Implementación de calendario interactivo</li>
+                  <li>Integración con base de datos institucional</li>
+                </ul>
+              </div>
+              
+              <div class="timeline-item">
+                <h5><strong>SGBT</strong></h5>
+                <p class="text-muted">Sistema Gestor de Bolsa de Trabajo</p>
+                <ul>
+                  <li>Desarrollo de módulo de vacantes para egresados</li>
+                  <li>Implementación de sistema de matching entre perfiles y vacantes</li>
+                  <li>Generación de reportes estadísticos</li>
+                </ul>
+              </div>
+              
+              <div class="timeline-item">
+                <h5><strong>Caja Web (SISA)</strong></h5>
+                <p class="text-muted">Sistema de Pagos en Línea</p>
+                <ul>
+                  <li>Desarrollo de módulo de pagos de colegiatura</li>
+                  <li>Integración con pasarelas de pago</li>
+                  <li>Generación de comprobantes digitales</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="info-card animate__animated animate__fadeInLeft animate__delay-1s">
+            <h3 class="section-title">Habilidades Técnicas</h3>
+            <div>
+              <span class="skill-badge utez-badge">JavaScript</span>
+              <span class="skill-badge utez-badge">Java</span>
+              <span class="skill-badge utez-badge">TypeScript</span>
+              <span class="skill-badge utez-badge">Python</span>
+              <span class="skill-badge utez-badge">C#</span>
+              <span class="skill-badge utez-badge">C++</span>
+              <span class="skill-badge utez-badge">React</span>
+              <span class="skill-badge utez-badge">Vue</span>
+              <span class="skill-badge utez-badge">Node</span>
+              <span class="skill-badge utez-badge">Alexa Skills</span>
+              <span class="skill-badge utez-badge">CSS</span>
+              <span class="skill-badge utez-badge">HTML</span>
+              <span class="skill-badge utez-badge">PHP</span>
+              <span class="skill-badge utez-badge">Laravel</span>
+              <span class="skill-badge utez-badge">MySQL</span>
+              <span class="skill-badge utez-badge">PostgreSQL</span>
+              <span class="skill-badge utez-badge">MongoDB</span>
+              <span class="skill-badge utez-badge">API REST</span>
+              <span class="skill-badge utez-badge">Bootstrap</span>
+              <span class="skill-badge utez-badge">Git</span>
+              <span class="skill-badge utez-badge">Metodologías Ágiles</span>
+              <span class="skill-badge utez-badge">CMMI Nivel 3</span>
+              <span class="skill-badge utez-badge">MOPROSOFT Nivel 5</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <div class="info-card animate__animated animate__fadeInRight">
+            <h3 class="section-title">Sobre Mí</h3>
+            <p>Soy un apasionado Desarrollador Jr. formado en la Universidad Tecnológica Emiliano Zapata (UTEZ), donde actualmente trabajo en el Centro de Desarrollo de Software (CDS) en horario matutino.</p>
+            <p>Participé en el desarrollo de sistemas institucionales bajo altos estándares de calidad (CMMI nivel 3 y MOPROSOFT nivel 5), adquiriendo experiencia tanto en desarrollo frontend como backend.</p>
+            <p>Me considero un profesional en constante crecimiento, comprometido con la calidad del software y la satisfacción del usuario final.</p>
+          </div>
+          
+          <div class="info-card animate__animated animate__fadeInRight animate__delay-1s">
+            <h3 class="section-title">Pasiones e Intereses</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                    <i class="fas fa-music text-primary"></i>
+                  </div>
+                  <span>Composición musical</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-3">
+                  <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                    <i class="fas fa-pen-fancy text-primary"></i>
+                  </div>
+                  <span>Escritura creativa</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-3">
+                  <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                    <i class="fas fa-brain text-primary"></i>
+                  </div>
+                  <span>Psicología humana</span>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                    <i class="fas fa-dumbbell text-primary"></i>
+                  </div>
+                  <span>Ejercicio físico</span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-3">
+                  <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                    <i class="fas fa-lightbulb text-primary"></i>
+                  </div>
+                  <span>Emprendimiento</span>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                  <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                    <i class="fas fa-chart-line text-primary"></i>
+                  </div>
+                  <span>Innovación tecnológica</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="info-card animate__animated animate__fadeInRight animate__delay-2s position-relative">
+            <div class="certification-badge">5</div>
+            <h3 class="section-title">Certificación MOPROSOFT</h3>
+            <p>Experiencia trabajando bajo el modelo MOPROSOFT nivel 5 (el más alto) en el desarrollo de software para la UTEZ, lo que garantiza procesos de desarrollo estandarizados y de alta calidad.</p>
+            <div class="progress mt-3" style="height: 10px;">
+              <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <a href="index.html" class="btn back-btn animate__animated animate__fadeInUp animate__delay-3s">
+          <i class="fas fa-arrow-left me-2"></i> Volver al equipo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
