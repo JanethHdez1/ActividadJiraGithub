@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adrian Hernandez Ramirez</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #00c6ff;
+      --secondary-color: #0072ff;
+      --dark-color: #1a1a2e;
+      --light-color: #f8f9fa;
+      --utez-color: #e63946;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--dark-color), #0f3460);
+      color: var(--light-color);
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .hero-section {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+      background: url('https://www.utez.edu.mx/wp-content/uploads/2021/01/edificio.jpg') no-repeat center center;
+      background-size: cover;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 114, 255, 0.6));
+      z-index: -1;
+    }
+
+    .profile-title {
+      font-size: 3.5rem;
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .profile-subtitle {
+      font-size: 1.5rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+
+    .profile-img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border: 5px solid var(--utez-color);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+      border-color: white;
+    }
+
+    .info-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-left: 5px solid var(--utez-color);
+      transition: all 0.3s ease;
+    }
+
+    .info-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-title {
+      color: var(--primary-color);
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    }
+
+    .skill-badge {
+      background: rgba(0, 198, 255, 0.2);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 50px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      display: inline-block;
+      border: 1px solid rgba(0, 198, 255, 0.5);
+    }
+
+    .utez-badge {
+      background: rgba(230, 57, 70, 0.2);
+      border: 1px solid rgba(230, 57, 70, 0.5);
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      margin-right: 15px;
+      color: white;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: var(--utez-color);
+      transform: translateY(-5px);
+      color: white;
+    }
+
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .back-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 50px;
+      padding: 10px 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: 30px;
+    }
+
+    .back-btn:hover {
+      background: var(--utez-color);
+      transform: translateY(-3px);
+    }
+
+    .project-card {
+      border-left: 4px solid var(--utez-color);
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .certification-badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: var(--utez-color);
+      color: white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--utez-color);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -30px;
+      top: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      border: 3px solid var(--utez-color);
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-1 order-2">
+          <h1 class="profile-title animate__animated animate__fadeInDown">Adrian Hernandez Ramirez</h1>
+          <h2 class="profile-subtitle animate__animated animate__fadeInDown animate__delay-1s">
+            <span class="badge bg-danger">Estudiante de ingenieria.</span> UTEZ
+          </h2>
+          <p class="lead animate__animated animate__fadeIn animate__delay-2s">
+            Estudiante de ingeria en la UTEZ en Desarrollo y Gestion de Software.
+          </p>
+
+          <div class="mt-4 animate__animated animate__fadeIn animate__delay-3s">
+            <a href="https://github.com/Aserejex22" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="https://www.utez.edu.mx" class="social-link" target="_blank"><i class="fas fa-university"></i></a>
+            <a href="20223tn097@utez.edu.mx" class="social-link"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-2 order-1 text-center mb-4 mb-lg-0">
+          <img
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/910ef7ee-7fcd-4f55-9b6c-f2056fdda32c/dg6sfbr-55f652b0-f87d-428d-b572-e3a2b5c87990.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzkxMGVmN2VlLTdmY2QtNGY1NS05YjZjLWYyMDU2ZmRkYTMyY1wvZGc2c2Zici01NWY2NTJiMC1mODdkLTQyOGQtYjU3Mi1lM2EyYjVjODc5OTAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._P7awbRY1IAL2AIKeGxb0q5kHSSdW-VkOX9fKvRMH7Q"
+            class="profile-img rounded-circle floating animate__animated animate__fadeIn" alt="Adrian">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="info-card animate__animated animate__fadeInLeft">
+            <h3 class="section-title">Sin chamba</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h5><strong>Desarrollador Full Stack</strong></h5>
+                <p class="text-muted">Tecnologías Web y Desarrollo de Aplicaciones</p>
+                <ul>
+                  <li>HTML5 y JavaScript</li>
+                  <li>Frameworks Frontend: React.js, Angular, Vue.js</li>
+                  <li>Frameworks Backend: Node.js, Spring Boot, Express.js</li>
+                  <li>Lenguajes de programación: Java, JavaScript, Python</li>
+                  <li>Gestión de bases de datos: MySQL, MongoDB</li>
+                  <li>Control de versiones con Git y GitHub</li>
+                  <li>Diseño responsivo y experiencia de usuario (UX/UI)</li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card animate__animated animate__fadeInLeft animate__delay-1s">
+            <h3 class="section-title">Habilidades Técnicas</h3>
+            <div>
+              <span class="skill-badge utez-badge">JavaScript</span>
+              <span class="skill-badge utez-badge">Java</span>
+              <span class="skill-badge utez-badge">Python</span>
+              <span class="skill-badge utez-badge">React</span>
+              <span class="skill-badge utez-badge">CSS</span>
+              <span class="skill-badge utez-badge">HTML</span>
+              <span class="skill-badge utez-badge">MySQL</span>
+              <span class="skill-badge utez-badge">MongoDB</span>
+              <span class="skill-badge utez-badge">Bootstrap</span>
+              <span class="skill-badge utez-badge">Git</span>
+              <span class="skill-badge utez-badge">Metodologías Ágiles</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="info-card animate__animated animate__fadeInRight">
+            <h3 class="section-title">Sobre Mí</h3>
+            <p>Soy estudiante de la Universidad Tecnológica Emiliano Zapata (UTEZ), en formación como Desarrollador Full
+              Stack, con conocimientos en desarrollo web y de aplicaciones.</p>
+            <p>Durante mi formación académica he aprendido a trabajar con tecnologías como HTML, CSS, JavaScript, React,
+              Java con Spring Boot y bases de datos como MySQL y MongoDB.</p>
+            <p>Me interesa desarrollar soluciones tecnológicas que sean funcionales, accesibles y centradas en el
+              usuario. Me esfuerzo por seguir aprendiendo y mejorar mis habilidades constantemente.</p>
+            <p>Estoy abierto a nuevas oportunidades que me permitan aplicar mis conocimientos y crecer profesionalmente
+              en el área del desarrollo de software.</p>
+          </div>
+        </div>
+        <div class="info-card animate__animated animate__fadeInRight animate__delay-1s">
+          <h3 class="section-title">Intereses</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                  <i class="fas fa-gamepad text-primary"></i>
+                </div>
+                <span>Jugar videojuegos</span>
+              </div>
+
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                  <i class="fas fa-bed text-primary"></i>
+                </div>
+                <span>Descansar y dormir</span>
+              </div>
+
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                  <i class="fas fa-star text-primary"></i>
+                </div>
+                <span>Fan de PENTA</span>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                  <i class="fas fa-microchip text-primary"></i>
+                </div>
+                <span>Interés por la tecnología</span>
+              </div>
+
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                  <i class="fas fa-code text-primary"></i>
+                </div>
+                <span>Aprender sobre desarrollo web</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="text-center">
+          <a href="index.html" class="btn back-btn animate__animated animate__fadeInUp animate__delay-3s">
+            <i class="fas fa-arrow-left me-2"></i> Volver al equipo
+          </a>
+        </div>
+      </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

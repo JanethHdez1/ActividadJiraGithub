@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +15,14 @@
       --dark-color: #1a1a2e;
       --light-color: #f8f9fa;
     }
-    
+
     body {
       background: linear-gradient(135deg, var(--dark-color), #16213e);
       color: var(--light-color);
       min-height: 100vh;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    
+
     .team-title {
       font-size: 3.5rem;
       background: linear-gradient(to right, #ff8a00, #e52e71);
@@ -29,56 +30,56 @@
       background-clip: text;
       color: transparent;
       font-weight: 800;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
-    
+
     .lead-text {
       font-size: 1.5rem;
       opacity: 0.9;
     }
-    
+
     .member-card {
       background: rgba(255, 255, 255, 0.05);
       border-radius: 15px;
       transition: all 0.4s ease;
       overflow: hidden;
       border: none;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       height: 100%;
     }
-    
+
     .member-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
       background: rgba(255, 255, 255, 0.1);
     }
-    
+
     .member-img {
       width: 150px;
       height: 150px;
       object-fit: cover;
-      border: 3px solid rgba(255,255,255,0.1);
+      border: 3px solid rgba(255, 255, 255, 0.1);
       margin: 20px auto;
       transition: all 0.3s ease;
     }
-    
+
     .member-card:hover .member-img {
       transform: scale(1.05);
-      border-color: rgba(255,255,255,0.3);
+      border-color: rgba(255, 255, 255, 0.3);
     }
-    
+
     .member-name {
       font-weight: 700;
       margin-bottom: 10px;
       color: white;
     }
-    
+
     .member-role {
       color: #4cc9f0;
       font-size: 0.9rem;
       margin-bottom: 15px;
     }
-    
+
     .view-btn {
       background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
       border: none;
@@ -88,17 +89,17 @@
       transition: all 0.3s ease;
       margin-bottom: 20px;
     }
-    
+
     .view-btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
-    
+
     .israel-card {
       position: relative;
       overflow: hidden;
     }
-    
+
     .israel-card::before {
       content: '';
       position: absolute;
@@ -109,25 +110,34 @@
       background: linear-gradient(45deg, rgba(0, 198, 255, 0.1), rgba(0, 114, 255, 0.2));
       z-index: -1;
     }
-    
+
     .israel-card .member-name {
       background: linear-gradient(to right, #00c6ff, #0072ff);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-    
+
     .floating {
       animation: floating 3s ease-in-out infinite;
     }
-    
+
     @keyframes floating {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0px); }
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Pantalla de inicio -->
@@ -139,7 +149,7 @@
 
     <!-- Tarjetas de miembros -->
     <div class="row g-4">
-      
+
       <!-- Ayala -->
       <div class="col-md-4 col-sm-6">
         <div class="member-card text-center p-4">
@@ -150,17 +160,17 @@
           <a href="ayala.html" class="btn view-btn">Ver Perfil</a>
         </div>
       </div>
-      
+
       <!-- Adrian -->
       <div class="col-md-4 col-sm-6">
         <div class="member-card text-center p-4">
-          <img src="https://randomuser.me/api/portraits/men/22.jpg" class="member-img rounded-circle" alt="Adrian">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/910ef7ee-7fcd-4f55-9b6c-f2056fdda32c/dg6sfbr-55f652b0-f87d-428d-b572-e3a2b5c87990.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzkxMGVmN2VlLTdmY2QtNGY1NS05YjZjLWYyMDU2ZmRkYTMyY1wvZGc2c2Zici01NWY2NTJiMC1mODdkLTQyOGQtYjU3Mi1lM2EyYjVjODc5OTAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._P7awbRY1IAL2AIKeGxb0q5kHSSdW-VkOX9fKvRMH7Q" class="member-img rounded-circle" alt="Adrian">
           <h3 class="member-name">Adrian</h3>
           <p class="member-role">Backend Developer</p>
-          <a href="#" class="btn view-btn">Ver Perfil</a>
+          <a href="adrian.html" class="btn view-btn">Ver Perfil</a>
         </div>
       </div>
-      
+
       <!-- Isai -->
       <div class="col-md-4 col-sm-6">
         <div class="member-card text-center p-4">
@@ -170,62 +180,68 @@
           <a href="#" class="btn view-btn">Ver Perfil</a>
         </div>
       </div>
-      
+
       <!-- Janeth -->
       <div class="col-md-4 col-sm-6">
         <div class="member-card text-center p-4">
-          <img src="https://randomuser.me/api/portraits/women/33.jpg" class="member-img rounded-circle" alt="Janeth">
-          <h3 class="member-name">Janeth</h3>
-          <p class="member-role">Project Manager</p>
-          <a href="#" class="btn view-btn">Ver Perfil</a>
+          <img
+            src="https://lh3.googleusercontent.com/a/ACg8ocJqqvOcO_--Q7hhcxiUuCpdWHswuxYzyMBNdaWDn2g_5xqdvsuH=s1080-c-rg-br100"
+            class="member-img rounded-circle floating" alt="Janeth">
+          <h3 class="member-name">Janeth Stephanie Hernández Victoriano</h3>
+          <p class="member-role">Product Owner</p>
+          <a href="./janeth.html" class="btn view-btn">Ver Perfil</a>
         </div>
       </div>
-      
+
       <!-- Israel (Destacado) -->
       <div class="col-md-4 col-sm-6">
         <div class="member-card text-center p-4 israel-card">
-          <img src="https://ca.slack-edge.com/T05K3N6824R-U07KJA6TVJS-1e8341c9ef65-512" 
-               class="member-img rounded-circle floating" alt="Israel">
+          <img src="https://ca.slack-edge.com/T05K3N6824R-U07KJA6TVJS-1e8341c9ef65-512"
+            class="member-img rounded-circle floating" alt="Israel">
           <h3 class="member-name">Israel Flores Reza</h3>
           <p class="member-role">Ing. Desarrollador de Software</p>
           <a href="israel.html" class="btn view-btn">Ver Perfil</a>
         </div>
       </div>
-      
+
       <!-- Sebastian (En proceso)-->
       <div class="col-md-4 col-sm-6">
         <div class="member-card text-center p-4">
-          <img src="https://lh3.googleusercontent.com/a/ACg8ocLtzFvEPHL6GxMb8R6fvngIDCq7O8pc-43lhYvimZ-YxO90tUlS=s96-c-rg-br100" 
+          <img
+            src="https://lh3.googleusercontent.com/a/ACg8ocLtzFvEPHL6GxMb8R6fvngIDCq7O8pc-43lhYvimZ-YxO90tUlS=s96-c-rg-br100"
             class="member-img rounded-circle floating" alt="Sebastian">
           <h3 class="member-name">Sebastiá Quintero Martínez</h3>
           <p class="member-role">Ing. Desarrollador de Software</p>
           <a href="sebastian.html" class="btn view-btn">Ver Perfil</a>
         </div>
       </div>
-      
+
       <!-- Jaime -->
       <div class="col-md-4 col-sm-6">
         <div class="member-card text-center p-4">
-          <img src="https://randomuser.me/api/portraits/men/50.jpg" class="member-img rounded-circle" alt="Jaime">
+          <img src="https://wallpaperaccess.com/full/2764808.jpg" class="member-img rounded-circle" alt="Jaime">
           <h3 class="member-name">Jaime</h3>
-          <p class="member-role">QA Engineer</p>
-          <a href="#" class="btn view-btn">Ver Perfil</a>
+          <p class="member-role">Desarrollador</p>
+          <a href="jaime.html" class="btn view-btn">Ver Perfil</a>
         </div>
       </div>
-      
+
       <!-- Oscar -->
       <div class="col-md-4 col-sm-6">
         <div class="member-card text-center p-4">
-          <img src="https://randomuser.me/api/portraits/men/65.jpg" class="member-img rounded-circle" alt="Oscar">
-          <h3 class="member-name">Oscar</h3>
-          <p class="member-role">Data Scientist</p>
-          <a href="#" class="btn view-btn">Ver Perfil</a>
+          <img src="https://i.pinimg.com/originals/e9/b1/c3/e9b1c3ef2e3cf46cd9725706fd55232a.jpg"
+            class="member-img rounded-circle floating" alt="Del Prado">
+          <h3 class="member-name">Oscar Gabriel Del Prado Valdez</h3>
+          <p class="member-role">Desarrollador Full Stack</p>
+          <a href="oscar.html" class="btn view-btn">Ver Perfil</a>
         </div>
       </div>
     </div>
   </div>
 
+  
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
