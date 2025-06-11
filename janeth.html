@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Janeth Stephanie Hernández Victoriano</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        :root {
+            --primary: #8e44ad;
+            --secondary: #c39bd3;
+            --accent: #f4ecf7;
+            --text-light: #ffffff;
+            --text-dark: #2d132c;
+            --overlay: rgba(72, 52, 94, 0.8);
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary), #5d3a6a);
+            color: var(--text-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero-section {
+            background: url('https://images.unsplash.com/photo-1503264116251-35a269479413') center/cover no-repeat;
+            position: relative;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: var(--overlay);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 6px solid var(--secondary);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+            border-color: var(--accent);
+        }
+
+        .profile-title {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-top: 20px;
+        }
+
+        .profile-subtitle {
+            font-size: 1.3rem;
+            color: var(--accent);
+        }
+
+        .info-section {
+            background-color: #fefefe;
+            color: var(--text-dark);
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .info-card {
+            background-color: var(--accent);
+            padding: 25px;
+            border-left: 5px solid var(--secondary);
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-badge {
+            background: var(--primary);
+            color: white;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 30px;
+            display: inline-block;
+            font-size: 0.85rem;
+        }
+
+        .social-link {
+            background: var(--secondary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            margin: 10px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            transform: scale(1.1);
+        }
+
+        .btn-back {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin-top: 30px;
+            transition: background 0.3s;
+        }
+
+        .btn-back:hover {
+            background: var(--secondary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="container hero-content animate__animated animate__fadeIn">
+            <img src="https://lh3.googleusercontent.com/a/ACg8ocJqqvOcO_--Q7hhcxiUuCpdWHswuxYzyMBNdaWDn2g_5xqdvsuH=s1080-c-rg-br100"
+                alt="Janeth Stephanie Hernández Victoriano" class="profile-img" />
+            <h1 class="profile-title mt-4">Janeth Stephanie Hernández Victoriano</h1>
+            <p class="profile-subtitle">Ing. en Desarrollo y Gestión de Software</p>
+            <div>
+                <a href="https://github.com/JanethHdez1" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.utez.edu.mx" class="social-link"><i class="fas fa-university"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info -->
+    <section class="info-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="info-card">
+                        <h3 class="section-title">Sobre Mí</h3>
+                        <p>Soy una estudiante de Ingeniería en Desarrollo y Gestión de Software en 9 cuatrimestre, grupo
+                            A, que tiene ganas de aprender y crecer en el campo de la tecnología. Me interesa las áreas
+                            en el desarrollo web full-stack y experiencia de usuario (UX/UI).</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 class="section-title">Carrera cursando</h3>
+                        <p>Actualmente curso el 9.º cuatrimestre de la carrera Ingeniería en Desarrollo y Gestión de
+                            Software. Este cuatrimestre me he enfocado en:</p>
+                        <ul>
+                            <li><strong>Administración de Proyectos de TI</strong></li>
+                            <li><strong>Extracción de Conocimiento en BD</strong></li>
+                            <li><strong>Desarrollo Web Integral</strong></li>
+                            <li><strong>Desarrollo para Dispositivos Móviles</strong></li>
+                            <li><strong>Dirección de Equipos de Alto Rendimiento</strong></li>
+                            <li><strong>Inglés</strong></li>	
+                        </ul>
+                        <p>Estas materias complementan mi perfil técnico y humano, preparándome para enfrentar retos
+                            reales en el mundo laboral.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="info-card animate__animated animate__fadeInRight animate__delay-1s">
+                        <h3 class="section-title">Hobbies</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                        <i class="fas fa-paint-brush text-primary"></i>
+                                    </div>
+                                    <span>Pintar</span>
+                                </div>
+
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                        <i class="fas fa-pencil-alt text-primary"></i>
+                                    </div>
+                                    <span>Dibujar</span>
+                                </div>
+
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                        <i class="fas fa-music text-primary"></i>
+                                    </div>
+                                    <span>Escuchar música</span>
+                                </div>
+
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                        <i class="fas fa-swimmer text-primary"></i>
+                                    </div>
+                                    <span>Nadar</span>
+                                </div>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                        <i class="fas fa-spa text-primary"></i>
+                                    </div>
+                                    <span>Practicar yoga</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                        <i class="fas fa-book-open text-primary"></i>
+                                    </div>
+                                    <span>Leer libros de fantasía y ciencia ficción</span>
+                                </div>
+
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                        <i class="fas fa-camera text-primary"></i>
+                                    </div>
+                                    <span>Tomar fotos de paisajes y naturaleza</span>
+                                </div>
+
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                        <i class="fas fa-tshirt text-primary"></i>
+                                    </div>
+                                    <span>Buscar nuevas combinaciones de outfits</span>
+                                </div>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                        <i class="fas fa-hand-sparkles text-primary"></i>
+                                    </div>
+                                    <span>Hacer manualidades</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="info-card">
+                        <h3 class="section-title">Habilidades Técnicas</h3>
+                        <div>
+                            <span class="skill-badge">HTML</span>
+                            <span class="skill-badge">CSS</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">React</span>
+                            <span class="skill-badge">Python</span>
+                            <span class="skill-badge">Java</span>
+                            <span class="skill-badge">MySQL</span>
+                            <span class="skill-badge">Bootstrap</span>
+                            <span class="skill-badge">Git</span>
+                            <span class="skill-badge">MongoDB</span>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="text-center">
+                    <a href="index.html" class="btn btn-back"><i class="fas fa-arrow-left me-2"></i>Volver al equipo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
